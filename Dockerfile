@@ -3,7 +3,7 @@ FROM node:alpine as build
 ARG APP_HOST
 
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 
 RUN touch .env
 RUN RUN echo "APP_HOST=${APP_HOST}}" >> .env
