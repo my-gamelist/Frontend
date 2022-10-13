@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN touch .env
-RUN RUN echo "APP_HOST=${APP_HOST}}" >> .env
+RUN echo "APP_HOST=${APP_HOST}}" >> .env
 
 RUN npm ci --silent
 RUN npm install react-scripts@3.4.1 -g --silent
