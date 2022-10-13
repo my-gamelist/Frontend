@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  frontend:
+    image: mygamelist-frontend
+    container_name: mygamelist-frontend
+    build:
+      context: .
+    ports:
+      - 80:80
+    volumes:
+      - ./.env:/.env
+
+volumes:
+  data:
+    driver: local
