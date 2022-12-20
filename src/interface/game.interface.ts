@@ -6,5 +6,9 @@ export default interface IGame {
     numReview: number,
     description: string,
     developers: [string],
-    publishers: [string]
+    publishers: [string],
+    steamRating: number,
+    metacriticScore: number,
+    steamReviews: number,
+    imageUrl: string,
 }
