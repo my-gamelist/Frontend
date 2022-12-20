@@ -13,7 +13,7 @@ export default function Game() {
         fetch(url)
         .then(res => res.json())
         .then(setGame)
-    },[])
+    },[url])
     
     console.log(game);
 
@@ -24,7 +24,7 @@ export default function Game() {
                 {/* This div is for game image and description */}
                 <div className="w-1/2 ml-10 mr-10">
                     <div className="w-full h-1/2 p-10">
-                        <img className="flex relative w-full h-full rounded-2xl" src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427"></img>
+                        <img alt="Game" className="flex relative w-full h-full rounded-2xl" src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427"></img>
                     </div>
                     <div className="w-full h-1/2 pl-10 pr-10 pb-10">
                         <div className="flex flex-col relative w-full h-full text-white bg-white bg-opacity-30 rounded-2xl">
