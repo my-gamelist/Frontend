@@ -8,7 +8,7 @@ import GameCard from "./GameCard";
 export default function TopGames() {
     const [topGames, setTopGames] = useState<IGame[]>([]);
     useEffect(() => {
-        fetch("http://localhost:3000/game/top")
+        fetch("http://localhost:3000/api/game/top")
             .then(res => res.json())
             .then(data => {
                 setTopGames(data);
