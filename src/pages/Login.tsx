@@ -24,7 +24,7 @@ export default function Login() {
         //     </div>
         // </div>
 
-        <div className="flex flex-col w-full h-full max-h-screen items-center">
+        <div className="flex flex-col w-5/6 h-screen max-h-screen overflow-y-auto relative items-center bg-[#343541]">
             <span className="flex mt-24 text-6xl text-gray-100">Login</span>
             <form className="flex flex-col relative w-1/3 mt-10 space-y-5">
                 <div className="flex relative w-full">

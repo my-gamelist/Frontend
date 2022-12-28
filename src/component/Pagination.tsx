@@ -72,8 +72,8 @@ export default function Pagination(props: IPage) {
     }
 
     return (
-        <div className="w-full h-20">
-            <div className="flex w-full h-full space-x-5 items-center justify-center">
+        <div className="w-full h-60">
+            <div className="flex w-full h-20 space-x-5 justify-center">
                 <BsArrowLeft className="flex w-10 h-10 p-2 text-gray-100 rounded-md cursor-pointer transition hover:bg-slate-500 duration-150"
                     onClick={() => handlePrevPage()} />
                 
