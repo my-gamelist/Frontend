@@ -3,8 +3,18 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontSize:{
+        '3xl':'28px',
+        '2xl':'24px'
+      },
+      fontFamily:{
+        
+      },
       colors: {
-        'blue': '#2E527B'
+        'accent':'#51C779',
+        'primary':'#141616',
+        'secondary': '#181A1B'
+
       },
       backgroundSize: {
         'size-200': '200% 200%',
