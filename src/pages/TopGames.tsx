@@ -5,6 +5,7 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai"
 import IGame from "../interface/game.interface";
 import GameCard from "../component/GameCard";
 import Pagination from "../component/Pagination";
+import Sidebar from "../component/Sidebar";
 
 export default function TopGames() {
     const [topGames, setTopGames] = useState<IGame[]>([]);
@@ -22,19 +23,19 @@ export default function TopGames() {
 
     if (topGames.length === 0) {
         return (
-            <div className="flex w-5/6 h-screen items-center justify-center bg-[#343541]">
-                <AiOutlineLoading3Quarters className="animate-spin text-white text-5xl" />
+            <div className="flex w-full h-full">
+                <Sidebar />
+                <div className="flex w-5/6 h-screen items-center justify-center bg-[#343541]">
+                    <AiOutlineLoading3Quarters className="animate-spin text-white text-5xl" />
+                </div>
             </div>
         )
     }
 
     return (
-        <div className="flex flex-col w-5/6 h-screen max-h-screen overflow-y-auto relative bg-[#343541]">
-            {/* side navbar */}
-            {/* <Sidebar /> */}
-            {/* main content */}
-            {/* <div className="flex flex-col w-full h-full max-h-screen overflow-y-auto"> */}
-
+        <div className="flex w-full h-full">
+            <Sidebar />
+            <div className="flex flex-col w-5/6 h-screen max-h-screen overflow-y-auto relative bg-[#343541]">
                 <h1 className="m-10 text-3xl text-gray-100">Top Games</h1>
                 <div className="grid grid-cols-4 gap-6 pl-10 pr-10 pb-10">
                     {topGames.map((game: IGame) => (
@@ -59,6 +60,6 @@ export default function TopGames() {
                     page={page}
                     setPage={setPage} />
             </div>
-        // </div>
+        </div>
     )
 }

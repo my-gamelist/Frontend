@@ -2,10 +2,11 @@ import { useEffect, useRef } from "react"
 
 export default function LoginPopup(props: any) {
     const ref = useRef<HTMLFormElement>(null);
+    const profileRef = props.profileRef;
 
     // if login form is not in focus, close the popup
     const dismissHandler = (event: MouseEvent) => {
-        if (!ref.current?.contains(event.target as Node)) {
+        if (!ref.current?.contains(event.target as Node) && !profileRef.current?.contains(event.target as Node)) {
             props.setLoginPopup(false);
         }
     }

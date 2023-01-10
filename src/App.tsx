@@ -7,7 +7,6 @@ import Login from './pages/Login';
 import Register from './pages/Register'
 export default function App() {
   return (
-    <div className="flex w-full h-full">
       <BrowserRouter>
         {/* <Sidebar /> */}
           <Routes>
@@ -18,6 +17,5 @@ export default function App() {
             <Route path= "/register" element={<Register/>}></Route>
           </Routes>
       </BrowserRouter>
-    </div>
   );
 }
